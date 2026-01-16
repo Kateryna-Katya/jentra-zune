@@ -1160,3 +1160,203 @@ a { text-decoration: none; color: inherit; transition: var(--transition); }
       max-width: 100%;
   }
 }
+/* Стили для юридических страниц */
+.pages {
+  padding: 160px 0 100px;
+  background: var(--bg);
+}
+
+.pages__header {
+  margin-bottom: 60px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 40px;
+}
+
+.pages h1 {
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  color: var(--secondary);
+  margin: 15px 0;
+}
+
+.pages__last-update {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  font-style: italic;
+}
+
+.pages__content {
+  line-height: 1.8;
+  color: var(--text);
+  font-size: 1.05rem;
+}
+
+.pages h2 {
+  font-size: 1.6rem;
+  margin: 40px 0 20px;
+  color: var(--secondary);
+  position: relative;
+}
+
+.pages p {
+  margin-bottom: 20px;
+}
+
+/* Стилизация списка с мятными маркерами */
+.pages__list {
+  margin: 25px 0;
+  padding-left: 5px;
+}
+
+.pages__list li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 15px;
+  list-style: none;
+}
+
+.pages__list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 12px;
+  width: 12px;
+  height: 2px;
+  background: var(--primary);
+  border-radius: 2px;
+}
+
+/* Контактный блок на странице */
+.pages__contact-box {
+  margin-top: 60px;
+  padding: 40px;
+  background: var(--bg-alt);
+  border-radius: 24px;
+  border-left: 4px solid var(--primary);
+}
+
+.pages__mail-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  color: var(--secondary);
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+.pages__mail-link:hover {
+  color: var(--primary-dark);
+}
+
+@media (max-width: 768px) {
+  .pages { padding-top: 120px; }
+  .pages__contact-box { padding: 25px; }
+}
+/* Дополнительные стили для Disclaimer */
+.pages__warning-box {
+  display: flex;
+  gap: 20px;
+  background: rgba(255, 193, 7, 0.05); /* Легкий оттенок предупреждения */
+  padding: 30px;
+  border-radius: 20px;
+  border: 1px dashed rgba(255, 193, 7, 0.3);
+  margin-bottom: 40px;
+  align-items: flex-start;
+}
+
+.pages__warning-box i {
+  color: #ffc107;
+  flex-shrink: 0;
+  width: 24px;
+}
+
+.pages__section {
+  margin-bottom: 35px;
+}
+
+.pages__footer-note {
+  margin-top: 50px;
+  padding: 25px;
+  background: var(--secondary);
+  color: var(--white);
+  border-radius: 16px;
+  font-size: 0.95rem;
+}
+
+.pages__footer-note strong {
+  color: var(--primary);
+}
+
+/* Стилизация заголовков внутри контента */
+.pages__content h2 {
+  font-size: 1.4rem;
+  color: var(--secondary);
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+/* Специфические стили для Политики данных */
+.pages__data-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin: 30px 0;
+}
+
+.pages__data-item {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 16px;
+  border: 1px solid #eee;
+}
+
+.pages__data-item h4 {
+  color: var(--secondary);
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 600px) {
+  .pages__data-grid {
+      grid-template-columns: 1fr;
+  }
+}
+/* Стили для страницы возврата */
+.pages__procedure {
+  margin: 30px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.procedure-step {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: var(--bg-alt);
+  padding: 15px 25px;
+  border-radius: 12px;
+  border: 1px solid #eee;
+}
+
+.procedure-step span {
+  width: 32px;
+  height: 32px;
+  background: var(--secondary);
+  color: var(--primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.procedure-step p {
+  margin-bottom: 0;
+  font-size: 0.95rem;
+}
+
+.pages__warning-box h4 {
+  margin-bottom: 10px;
+  color: var(--secondary);
+}
